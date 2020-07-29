@@ -132,7 +132,7 @@ const StudentResultBoard = () => {
         }
 
 //----------------------------------------fetch the data-----------------------------------------------------------------------------------//
-        axios.get('http://localhost:3001/getResults').then(response => {
+        axios.get('https://student-notice-board.herokuapp.com//getResults').then(response => {
             console.log('data.message ---> ', response.data.message);
             if (response.data.message && response.data.message.length !== 0) {
                 const data = dataProcess(response.data.message)

@@ -173,7 +173,7 @@ const validate = (name,value) => {
 const handleSubmit = (e) => {
     e.preventDefault()
     let obj = {name:form.name,marks:{Maths:form.Maths, English:form.English, Science:form.English},rollNumber:form.rollNumber}
-    axios.post('https://student-notice-board.herokuapp.com//createResult',(obj)).then(response => {
+    axios.post('https://student-notice-board.herokuapp.com/createResult',(obj)).then(response => {
         if(response.data.message){
             setSuccessMessage(response.data.message)
             setErrorMessage('')

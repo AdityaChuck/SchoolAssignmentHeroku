@@ -184,7 +184,7 @@ const SchoolAdmissionForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         let obj = form
-        axios.post('https://student-notice-board.herokuapp.com//createAdmission',obj).then(response => {
+        axios.post('https://student-notice-board.herokuapp.com/createAdmission',obj).then(response => {
             if(response.data.message){
                 setSuccessMessage(response.data.message)
                 setErrorMessage('')

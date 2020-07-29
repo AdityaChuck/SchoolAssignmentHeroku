@@ -33,7 +33,7 @@ const AdminSchoolAdmissionList = () => {
     const [tableData,setTableData] = useState([])
     const [errorMessage,setErrorMessage] = useState('')
     useEffect(() => {
-        axios.get('https://student-notice-board.herokuapp.com//getAdmissions').then(response => {
+        axios.get('https://student-notice-board.herokuapp.com/getAdmissions').then(response => {
             if(response.data.message && response.data.message.length !==0){
                 setTableData(response.data.message)
                 setErrorMessage('')

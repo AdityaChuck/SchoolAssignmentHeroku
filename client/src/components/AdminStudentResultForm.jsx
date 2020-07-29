@@ -177,11 +177,13 @@ const handleSubmit = (e) => {
         if(response.data.message){
             setSuccessMessage(response.data.message)
             setErrorMessage('')
+            setForm({name:'', rollNumber:'', Maths:'', English:'', Science:''})
             setOpen(true)
         }
     }).catch(err => {
         setSuccessMessage('')
         setErrorMessage(err.response.data.message)
+        setForm({name:'', rollNumber:'', Maths:'', English:'', Science:''})
         setOpen(true)
     })
     
@@ -194,7 +196,7 @@ const handleSubmit = (e) => {
           <ThemeProvider theme={theme}>
                 <br/>
                 <Typography color='primary' variant='h4' className={classes.typography}>
-                    SCHOOL ADMISSION FORM
+                    ADMIN - STUDENT RESULT FORM
                 </Typography>
                 <br/>
                 <Divider/>

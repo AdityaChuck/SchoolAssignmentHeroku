@@ -188,11 +188,13 @@ const SchoolAdmissionForm = (props) => {
             if(response.data.message){
                 setSuccessMessage(response.data.message)
                 setErrorMessage('')
+                setForm({Name : '', LastName : '', Class : '', Year: '', Marks : '' })
                 setOpen(true)
             }
         }).catch(err => {
             setSuccessMessage('')
             setErrorMessage(err.response.data.message)
+            setForm({Name : '', LastName : '', Class : '', Year: '', Marks : '' })
             setOpen(true)
         })
     }
